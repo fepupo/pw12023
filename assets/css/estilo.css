@@ -3,9 +3,58 @@
     padding: 0;
 }
 
-header{
-    background-color: #e1fce1;
+body{
+    background-color: #c9f6c9;
 }
-.centraliza{
+
+.item1 { grid-area: cabecalho; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: principal; }
+.item4 { grid-area: direita; }
+.item5 { grid-area: rodape; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho'
+    'menu menu menu menu menu menu'
+    'principal principal principal principal direita direita'
+    'rodape rodape rodape rodape rodape rodape';
+  gap: 5px;  
+  padding: 0px;
+}
+
+.grid-container > div {
+  background-color: #e1fce1;
+  
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1{
+    float: left;
+    text-align: left;
+}
+
+ul.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+li.item_menu {
+    float: left;
+  }
+  
+  li.item_menu a {
+    display: block;
+    color: white;
     text-align: center;
-}
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  li.item_menu a:hover {
+    background-color: #111111;
+  }
